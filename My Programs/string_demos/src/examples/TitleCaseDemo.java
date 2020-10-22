@@ -14,11 +14,8 @@ public class TitleCaseDemo {
 		StringBuilder sb2=new StringBuilder();
 		
 		for(String s1:ar) {
-			if (s1.length()>=2) {
 			 sb2.append(s1.substring(0,s1.length()-1)).append(Character.toUpperCase(s1.charAt(s1.length()-1))).append(" ");
-			} else
-				sb2.append(Character.toUpperCase(s1.charAt(0))).append(" ");
-		    }
+		}
 		System.out.println(sb2.toString().trim());
 		
 	}
