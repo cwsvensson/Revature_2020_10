@@ -48,6 +48,11 @@ public class SwitchTester {
 		long l1 = 12345678L;	// No good
 		// switch (l1) {}
 		System.out.println("Doesn't work for long");
+		
+		String str = "str";
+		switch (str) {}
+		System.out.println("Works for String");
+		
 	}
 
 }
