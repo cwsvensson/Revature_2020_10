@@ -14,8 +14,11 @@ public class PostresSqlConnection {
 	
 	public static Connection getConnection() throws ClassNotFoundException, SQLException {
 		Class.forName(DbUtilProps.DRIVER);
-		String url=DbUtilProps.URL;			
+		System.out.println("DbUtilProps.DRIVER = "+DbUtilProps.DRIVER);
+		String url=DbUtilProps.URL;
+		System.out.println("DbUtilProps.URL = " + DbUtilProps.URL);
 		String username=System.getenv("postgreSQLusername");
+		System.out.println("username = " + username);
 		String password=System.getenv("postgreSQLpassword");
 		connection=DriverManager.getConnection(url, username, password);
 		return connection;
